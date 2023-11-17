@@ -1,10 +1,10 @@
-// Project Title
-// Your Name
-// Date
+// Cookie Clicker
+// Anamol Dhakal
+// 11/16/2023
 //
 // Extra for Experts:
 // - describe what you did to take this project "above and beyond"
-
+function preload. 
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
