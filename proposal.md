@@ -3,17 +3,31 @@
 trying my best to add my own things. This includes fixing the game to make sure it can work propery and not crash due to returning variables that do not exist, along with poorly made loops and so on.
 
 ## Needs To Have List
-- Basic fundamentals of cookie clicker
 - Cookie counter
+    ->visibly increasing without any delay
+
 - Shop interface
+    ->exponentally increasing price the more you buy an item 
+    ->pictures/images for items
+
 - Cookie Image/resize animation
     ->cookie image
     ->golden cookie image
+    ->grows and shrinks in size whenever cookie is clicked, respresenting a kind of "animation"
+
+- Music
+    ->menu music
+    ->main-game music
+    ->minigame music
+
 - Multiple gamemodes 
-    ->cookie memory, cookie mines
-- save function
+    ->cookie memory
+    ->cookie mines
+
+- Save function
     ->load
     ->save
+    ->delete
 
 
 ## Nice To Have List

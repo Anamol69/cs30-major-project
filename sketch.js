@@ -5,6 +5,26 @@
 // Extra for Experts:
 // - describe what you did to take this project "above and beyond"
 
+class Shop {
+  constructor(x, y, price, name, amountOwned) {
+    this.x = x;
+    this. y = y;
+    this.price = price;
+    this.name = name;
+    this.amountOwned = amountOwned;
+  }
+  dough() {
+    this.price = "10 cookies";
+    this.name = "Cookie Dough";
+    this.x = 100;
+    this.y = 100;
+  }
+  flower() {
+
+  }
+
+}
+
 class GoldenVariants {
   constructor(test1, test2, test3, test4, test5, test6) {
     this.test1 = test1;
@@ -43,6 +63,8 @@ let menuMusic;
 let mainGameMusic;
 let clickSound;
 let goldenCookieSound;
+let gameStarted = false;
+let miniGame = false;
 
 function preload() {
   cookie = loadImage("cookie.png");
@@ -55,6 +77,10 @@ function preload() {
   clickSound = loadSound("clickSound.mp3");
   goldenCookieSound = loadSound("goldenCookieSound.wav");
 
+  menuMusic.setVolume(0.5);
+  clickSound.setVolume(1);
+  goldenCookieSound.setVolume(2);
+
 
 }
 
@@ -64,9 +90,23 @@ function setup() {
 
 function draw() {
   background(220);
-  fill(random(0, 255), random(0, 255), random(0, 255));
-  circle(mouseX, mouseY, 100);
+  startScreen();
+  cookieClicked();
+  goldenCookieSpawn();
 }
 
 
 
+function startScreen() {
+  if (!menuMusic.isPlaying()) {
+    menuMusic.loop;
+  }
+}
+
+function cookieClicked() {
+  clickSound.play();
+}
+
+function goldenCookieSpawn() {
+  goldenCookieSound.play();
+}
