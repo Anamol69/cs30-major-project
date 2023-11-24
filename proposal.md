@@ -32,4 +32,10 @@ trying my best to add my own things. This includes fixing the game to make sure 
 
 ## Nice To Have List
 - Other gamemodes/minigames
+
 - Efficient code that won't use 100% of someone's pc usage
+
+- Leaderboard
+    ->shows player names, and player cookie count
+
+- Multiplayer

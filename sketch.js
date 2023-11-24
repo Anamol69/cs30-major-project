@@ -20,10 +20,25 @@ class Shop {
     this.y = 100;
   }
   flower() {
-
+    this.price = "100 cookies";
+    this.name = "Flower";
+    this.x = 150;
+    this.y = 150;
   }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 class GoldenVariants {
   constructor(test1, test2, test3, test4, test5, test6) {
@@ -57,6 +72,7 @@ class GoldenVariants {
 
 
 
+let leaderboard = [];
 let cookie;
 let goldenCookie;
 let menuMusic;
@@ -91,8 +107,6 @@ function setup() {
 function draw() {
   background(220);
   startScreen();
-  cookieClicked();
-  goldenCookieSpawn();
 }
 
 
@@ -103,10 +117,12 @@ function startScreen() {
   }
 }
 
-function cookieClicked() {
+function mousePressed() {
   clickSound.play();
 }
 
 function goldenCookieSpawn() {
+
   goldenCookieSound.play();
 }
+
