@@ -17,6 +17,7 @@ html, body {
   margin-bottom: 50px;
 }
 
-canvas {
-  display: block;
+.cookie-image {
+  width: 300px;
 }
+

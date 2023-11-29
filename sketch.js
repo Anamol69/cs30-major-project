@@ -69,11 +69,10 @@ class GoldenVariants {
   
 }
 
-
+let cookie = document.querySelector(".cookie-cost");
 
 
 let leaderboard = [];
-let cookie;
 let goldenCookie;
 let menuMusic;
 let mainGameMusic;
@@ -98,6 +97,10 @@ function preload() {
   goldenCookieSound.setVolume(2);
 
 
+}
+
+function incrementCookie() {
+  cookie.innerHTML = parseFloat(cookie.innerHTML) + 1;
 }
 
 function setup() {
