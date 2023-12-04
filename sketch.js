@@ -81,6 +81,10 @@ let goldenCookieSound;
 let gameStarted = false;
 let miniGame = false;
 
+function incrementCookie() {
+  cookie.innerHTML = parseFloat(cookie.innerHTML) + 1;
+}
+
 function preload() {
   cookie = loadImage("cookie.png");
   goldenCookie = loadImage("goldenCookie.png");
@@ -99,9 +103,6 @@ function preload() {
 
 }
 
-function incrementCookie() {
-  cookie.innerHTML = parseFloat(cookie.innerHTML) + 1;
-}
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
