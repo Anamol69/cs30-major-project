@@ -21,3 +21,24 @@ body {
   width: 300px;
 }
 
+.cookie-image:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.cookie-image:active {
+  opacity: 0.8;
+  transform: scale(1.02)
+}
+
+.upgrade {
+  display: flex;
+}
+
+.upgrade-img {
+  width: 55px
+}
+
+.cookie-img {
+  width: 20px;
+}
