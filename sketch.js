@@ -58,48 +58,56 @@
 // }
 
 let cookie = document.querySelector(".cookie-cost");
-
-
+let cursorCost = document.querySelector(".cursor-cost");
+let parsedCookie = parseFloat(cookie.innerHTML);
+let parsedCursorCost = parseFloat(cursorCost.innerHTML);
 // let leaderboard = [];
-let goldenCookie;
-let menuMusic;
-let mainGameMusic;
-let clickSound;
-let goldenCookieSound;
+// let goldenCookie;
+// let menuMusic;
+// let mainGameMusic;
+// let clickSound;
+// let goldenCookieSound;
 // let gameStarted = false;
 // let miniGame = false;
 
 function incrementCookie() {
-  cookie.innerHTML = parseFloat(cookie.innerHTML) + 1;
+  parsedCookie += 1;
+  cookie.innerHTML = parsedCookie;
 }
 
-function preload() {
-  cookie = loadImage("cookie.png");
-  goldenCookie = loadImage("goldenCookie.png");
+function buyCursor() {
+  if (parsedCookie >= parsedCursorCost) {
+    parsedCookie -= parsedCookie;
+    cookie.innerHTML = cursorCost.innerHTML;
+  }
+}
+// function preload() {
+//   cookie = loadImage("cookie.png");
+//   goldenCookie = loadImage("goldenCookie.png");
 
   
   
-  menuMusic = loadSound("menuMusic.flac");
-  mainGameMusic = loadSound("mainGameMusic.ogg");
-  clickSound = loadSound("clickSound.mp3");
-  goldenCookieSound = loadSound("goldenCookieSound.wav");
+//   menuMusic = loadSound("menuMusic.flac");
+//   mainGameMusic = loadSound("mainGameMusic.ogg");
+//   clickSound = loadSound("clickSound.mp3");
+//   goldenCookieSound = loadSound("goldenCookieSound.wav");
 
-  menuMusic.setVolume(0.5);
-  clickSound.setVolume(1);
-  goldenCookieSound.setVolume(2);
-
-
-}
+//   menuMusic.setVolume(0.5);
+//   clickSound.setVolume(1);
+//   goldenCookieSound.setVolume(2);
 
 
-function setup() {
-  createCanvas(windowWidth, windowHeight);
-}
+// }
 
-function draw() {
-  background(220);
-  //startScreen();
-}
+
+// function setup() {
+//   createCanvas(windowWidth, windowHeight);
+// }
+
+// function draw() {
+//   background(220);
+//   startScreen();
+// }
 
 
 
@@ -109,9 +117,9 @@ function draw() {
 //   }
 // }
 
-function mousePressed() {
-  clickSound.play();
-}
+// function mousePressed() {
+//   clickSound.play();
+// }
 
 // function goldenCookieSpawn() {
 
