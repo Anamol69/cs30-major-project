@@ -77,8 +77,8 @@ function incrementCookie() {
 
 function buyCursor() {
   if (parsedCookie >= parsedCursorCost) {
-    parsedCookie -= parsedCookie;
-    cookie.innerHTML = cursorCost.innerHTML;
+    parsedCookie -= parsedCursorCost;
+    cookie.innerHTML = parsedCookie;
   }
 }
 // function preload() {
