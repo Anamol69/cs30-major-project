@@ -58,9 +58,15 @@
 // }
 
 let cookie = document.querySelector(".cookie-cost");
-let cursorCost = document.querySelector(".cursor-cost");
 let parsedCookie = parseFloat(cookie.innerHTML);
+
+let cursorCost = document.querySelector(".cursor-cost");
 let parsedCursorCost = parseFloat(cursorCost.innerHTML);
+let cursorLevel = document.querySelector(".cursor-level");
+let cursorIncrease = document.querySelector(".clicker-increase");
+let parsedCursorIncrease = parseFloat(cursorIncrease);
+
+let cpc = 1;
 // let leaderboard = [];
 // let goldenCookie;
 // let menuMusic;
@@ -71,7 +77,7 @@ let parsedCursorCost = parseFloat(cursorCost.innerHTML);
 // let miniGame = false;
 
 function incrementCookie() {
-  parsedCookie += 1;
+  parsedCookie += cpc;
   cookie.innerHTML = parsedCookie;
 }
 
@@ -79,6 +85,12 @@ function buyCursor() {
   if (parsedCookie >= parsedCursorCost) {
     parsedCookie -= parsedCursorCost;
     cookie.innerHTML = parsedCookie;
+
+    cursorLevel.innerHTML ++;
+
+    parsedCursorIncrease = parsedCursorIncrease * 1.03;
+    cursorIncrease.innerHTML = parsedCursorIncrease;
+    cpc += parsedCursorIncrease;
   }
 }
 // function preload() {
