@@ -64,7 +64,7 @@ let cursorCost = document.querySelector(".cursor-cost");
 let parsedCursorCost = parseFloat(cursorCost.innerHTML);
 let cursorLevel = document.querySelector(".cursor-level");
 let cursorIncrease = document.querySelector(".clicker-increase");
-let parsedCursorIncrease = parseFloat(cursorIncrease);
+let parsedCursorIncrease = parseFloat(cursorIncrease.innerHTML);
 
 let cpc = 1;
 // let leaderboard = [];
@@ -78,7 +78,7 @@ let cpc = 1;
 
 function incrementCookie() {
   parsedCookie += cpc;
-  cookie.innerHTML = parsedCookie;
+  cookie.innerHTML = Math.round(parsedCookie += cpc);
 }
 
 function buyCursor() {

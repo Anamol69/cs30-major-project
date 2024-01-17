@@ -46,6 +46,15 @@ body {
   position: relative;
 }
 
+.upgrade-img {
+  width: 55px;
+}
+
+.cookie-img {
+  width: 20px;
+  height: 20px;
+}
+
 .mid-section h4 {
   margin: 0;
   margin-bottom: 20px;
@@ -54,15 +63,6 @@ body {
 
 .mid-section p {
   margin: 0;
-}
-
-.upgrade-img {
-  width: 55px;
-}
-
-.cookie-img {
-  width: 20px;
-  height: 20px;
 }
 
 .cost-info {
