@@ -63,7 +63,7 @@ let parsedCookie = parseFloat(cookie.innerHTML);
 let cursorCost = document.querySelector(".cursor-cost");
 let parsedCursorCost = parseFloat(cursorCost.innerHTML);
 let cursorLevel = document.querySelector(".cursor-level");
-let cursorIncrease = document.querySelector(".clicker-increase");
+let cursorIncrease = document.querySelector(".cursor-increase");
 let parsedCursorIncrease = parseFloat(cursorIncrease.innerHTML);
 
 let cpc = 1;
@@ -77,7 +77,6 @@ let cpc = 1;
 // let miniGame = false;
 
 function incrementCookie() {
-  parsedCookie += cpc;
   cookie.innerHTML = Math.round(parsedCookie += cpc);
 }
 
@@ -87,10 +86,13 @@ function buyCursor() {
     cookie.innerHTML = parsedCookie;
 
     cursorLevel.innerHTML ++;
-
-    parsedCursorIncrease = parsedCursorIncrease * 1.03;
+    parsedCursorIncrease = parseFloat ((parsedCursorIncrease * 1.03).toFixed(2));
     cursorIncrease.innerHTML = parsedCursorIncrease;
-    cpc += parsedCursorIncrease;
+    cpc = parsedCursorIncrease;
+
+    // parsedCursorIncrease = parsedCursorIncrease * 1.03;
+    // cursorIncrease.innerHTML = parsedCursorIncrease;
+    // cpc += parsedCursorIncrease;
   }
 }
 // function preload() {
