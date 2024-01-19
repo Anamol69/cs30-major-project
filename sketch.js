@@ -66,7 +66,24 @@ let cursorLevel = document.querySelector(".cursor-level");
 let cursorIncrease = document.querySelector(".cursor-increase");
 let parsedCursorIncrease = parseFloat(cursorIncrease.innerHTML);
 
+let sugarCost = document.querySelector(".sugar-cost");
+let parsedSugarCost = parseFloat(sugarCost.innerHTML);
+let sugarLevel = document.querySelector(".sugar-level");
+let sugarIncrease = document.querySelector(".sugar-increase");
+let parsedSugarIncrease = parseFloat(sugarIncrease.innerHTML);
+
+let farmCost = document.querySelector(".farm-cost");
+let parsedFarmCost = parseFloat(farmCost.innerHTML);
+let farmLevel = document.querySelector(".farm-level");
+let farmIncrease = document.querySelector(".farm-increase");
+let parsedFarmIncrease = parseFloat(farmIncrease.innerHTML);
+
+let cpcText = document.getElementById("cpc-text");
+let cpsText = document.getElementById("cps-text");
+
 let cpc = 1;
+
+let cps = 0;
 // let leaderboard = [];
 // let goldenCookie;
 // let menuMusic;
@@ -82,19 +99,56 @@ function incrementCookie() {
 
 function buyCursor() {
   if (parsedCookie >= parsedCursorCost) {
-    parsedCookie -= parsedCursorCost;
-    cookie.innerHTML = parsedCookie;
+    cookie.innerHTML = Math.round(parsedCookie -= parsedCursorCost);
 
     cursorLevel.innerHTML ++;
+
     parsedCursorIncrease = parseFloat ((parsedCursorIncrease * 1.03).toFixed(2));
     cursorIncrease.innerHTML = parsedCursorIncrease;
-    cpc = parsedCursorIncrease;
+    cpc += parsedCursorIncrease;
 
-    // parsedCursorIncrease = parsedCursorIncrease * 1.03;
-    // cursorIncrease.innerHTML = parsedCursorIncrease;
-    // cpc += parsedCursorIncrease;
+    parsedCursorCost *= 1.18;
+    cursorCost.innerHTML = Math.round(parsedCursorCost);
   }
 }
+
+function buySugar() {
+  if (parsedCookie >= parsedSugarCost) {
+    cookie.innerHTML = Math.round(parsedCookie -= parsedSugarCost);
+
+    sugarLevel.innerHTML ++;
+
+    parsedSugarIncrease = parseFloat ((parsedSugarIncrease * 1.03).toFixed(2));
+    sugarIncrease.innerHTML = parsedSugarIncrease;
+    cpc += parsedSugarIncrease;
+
+    parsedSugarCost *= 1.18;
+    sugarCost.innerHTML = Math.round(parsedSugarCost);
+  }
+}
+
+function buyFarm() {
+  if (parsedCookie >= parsedFarmCost) {
+    cookie.innerHTML = Math.round(parsedCookie -= parsedFarmCost);
+
+    farmLevel.innerHTML ++;
+
+    parsedFarmIncrease = parseFloat ((parsedFarmIncrease * 1.03).toFixed(2));
+    farmIncrease.innerHTML = parsedFarmIncrease;
+    cps += parsedFarmIncrease;
+
+    parsedFarmCost *= 1.18;
+    farmCost.innerHTML = Math.round(parsedFarmCost);
+  }
+}
+
+setInterval(() => {
+  parsedCookie += cps / 10;
+  cookie.innerHTML = Math.round(parsedCookie);
+  cpcText.innerHTML = Math.round(cpc);
+  cpsText.innerHTML = Math.round(cps);
+}, 100);
+
 // function preload() {
 //   cookie = loadImage("cookie.png");
 //   goldenCookie = loadImage("goldenCookie.png");

@@ -8,34 +8,83 @@
   </head>
   <body>
     <section>
-      <div class="main">
+      <div class="main">   
         <div class="left">
-          <h3>Cookie: <span class = "cookie-cost">0</span></h3>
+          <h3>Cookies <span class="cookie-cost">0</span></h3>
           <img src="cookie.png" alt="" srcset="" class="cookie-image" onclick="incrementCookie()" draggable="false">
         </div>
         <div class="right">
           <div class="upgrade" onclick="buyCursor()">
             <div class="left-section">
               <img src="cursor.png" alt="" class="upgrade-img">
-              <div>
-                <div class="mid-section">
-                  <h4>Cursor</h4>
-                  <div class="cost-info">
-                    <p>Cost: <span class="cursor-cost"></span>10</p>
-                    <img src="cookie.png" alt="" srcset="" class="cookie-img">
-                  </div>
-                  <div>
-                    <div class="right-section">level <span class ="cursor-level">0</span></div> 
-                    
-                    <div class="next-level-info">
-                      <p>
-                        +<span class="cursor-increase">1</span> cookies <br /> per second
-                      </p>
-                    </div>
-                  </div>
-                </div>
+            </div>
+            <div class="mid-section">
+              <h4>Cursor</h4>
+              <div class="cost-info">
+                <p class="cost-text"><span class="cursor-cost">10</span></p>
+                <img src="cookie.png" alt="" srcset="cookie-img">
               </div>
-            </section>
+            </div>
+            <div class="right-section">Level <span class="cursor-level">0</span></div>
+
+            <div class="next-level-info">
+              <p>
+                +<span class="cursor-increase">1</span> cookies <br> per click
+              </p>
+            </div>
+          </div>
+
+          <div class="upgrade" onclick="buySugar()">
+            <div class="left-section">
+              <img src="cursor.png" alt="" class="upgrade-img">
+            </div>
+            <div class="mid-section">
+              <h4>Sugar</h4>
+              <div class="cost-info">
+                <p class="cost-text"><span class="Sugar-cost">130</span></p>
+                <img src="cookie.png" alt="" srcset="cookie-img">
+              </div>
+            </div>
+            <div class="right-section">Level <span class="Sugar-level">0</span></div>
+
+            <div class="next-level-info">
+              <p>
+                +<span class="Sugar-increase">4</span> cookies <br> per click
+              </p>
+            </div>
+          </div>
+
+          <div class="upgrade" onclick="buyFarm()">
+            <div class="left-section">
+              <img src="cursor.png" alt="" class="upgrade-img">
+            </div>
+            <div class="mid-section">
+              <h4>Farm</h4>
+              <div class="cost-info">
+                <p class="cost-text"><span class="Farm-cost">850</span></p>
+                <img src="cookie.png" alt="" srcset="cookie-img">
+              </div>
+            </div>
+            <div class="right-section">Level <span class="Farm-level">0</span></div>
+
+            <div class="next-level-info">
+              <p>
+                +<span class="Farm-increase">24</span> cookies <br> per second
+              </p>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+      <div class="statistics">
+        <div class="texts">
+          <p>CPC: <span id="cpc-text">1</span></p>
+          <p>CPS: <span id="cps-text">0</span></p>
+        </div>
+      </div>
+    </section>
 
     <script src="sketch.js"></script>
   </body>
