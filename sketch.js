@@ -94,7 +94,6 @@ let cps = 0;
 // let miniGame = false;
 
 function incrementCookie() {
-  const cpc = 1;
   cookie.innerHTML = Math.round(parsedCookie += cpc);
   
 }
