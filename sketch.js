@@ -3,7 +3,7 @@
 // 11/16/2023
 //
 // Extra for Experts:
-// - describe what you did to take this project "above and beyond"
+// - I used HTML to make the game, which we didn't learn much of in class.
 
 // class Shop {
 //   constructor(x, y, price, name, amountOwned) {
@@ -92,6 +92,8 @@ let cps = 0;
 // let goldenCookieSound;
 // let gameStarted = false;
 // let miniGame = false;
+const backgroundMusic = new Audio("mainGameMusic.ogg");
+backgroundMusic.volume = 0.3;
 
 function incrementCookie() {
   cookie.innerHTML = Math.round(parsedCookie += cpc);
@@ -148,47 +150,49 @@ setInterval(() => {
   cookie.innerHTML = Math.round(parsedCookie);
   cpcText.innerHTML = Math.round(cpc);
   cpsText.innerHTML = Math.round(cps);
+  backgroundMusic.play;
 }, 100);
 
-// function preload() {
-//   cookie = loadImage("cookie.png");
-//   goldenCookie = loadImage("goldenCookie.png");
-
+//  function preload() {
   
   
-//   menuMusic = loadSound("menuMusic.flac");
-//   mainGameMusic = loadSound("mainGameMusic.ogg");
-//   clickSound = loadSound("clickSound.mp3");
-//   goldenCookieSound = loadSound("goldenCookieSound.wav");
+//    menuMusic = loadSound("menuMusic.flac");
+//    mainGameMusic = loadSound("mainGameMusic.ogg");
+//    clickSound = loadSound("clickSound.mp3");
+//    goldenCookieSound = loadSound("goldenCookieSound.wav");
 
-//   menuMusic.setVolume(0.5);
-//   clickSound.setVolume(1);
-//   goldenCookieSound.setVolume(2);
-
-
-// }
+//    menuMusic.setVolume(0.5);
+//    clickSound.setVolume(1);
+//    goldenCookieSound.setVolume(2);
 
 
-// function setup() {
-//   createCanvas(windowWidth, windowHeight);
-// }
-
-// function draw() {
-//   background(220);
-//   startScreen();
-// }
+//  }
 
 
+//  if (!menuMusic.isPlaying()) {
+//      menuMusic.loop;
+//  }
 
-// function startScreen() {
-//   if (!menuMusic.isPlaying()) {
-//     menuMusic.loop;
-//   }
-// }
+//  function setup() {
+//    createCanvas(windowWidth, windowHeight);
+//  }
 
-// function mousePressed() {
-//   clickSound.play();
-// }
+//  function draw() {
+//    background(220);
+//    startScreen();
+//  }
+
+
+
+//  function startScreen() {
+//    if (!menuMusic.isPlaying()) {
+//      menuMusic.loop;
+//    }
+//  }
+
+//  function mousePressed() {
+//    clickSound.play();
+//  }
 
 // function goldenCookieSpawn() {
 
